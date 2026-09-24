@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #02080c;
+  color: #f3f7f8;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: #19c5f4;
+  color: #02080c;
+}
+
+/* thin technical divider */
+.divider-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(136, 153, 163, 0.35),
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
